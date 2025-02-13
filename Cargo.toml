@@ -1,6 +1,0 @@
-[package]
-name = "mbich-events-app"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
