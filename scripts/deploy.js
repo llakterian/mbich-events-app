@@ -1,18 +1,17 @@
+const hre = require("hardhat");
+
 async function main() {
-    const [deployer] = await ethers.getSigners();
-    console.log("Deploying contracts with account:", deployer.address);
+  const EventManagement = await hre.ethers.getContractFactory("EventManagement");
+  const eventManagement = await EventManagement.deploy();
+  await eventManagement.waitForDeployment();
   
-    const EventManagement = await ethers.deployContract("EventManagement");
-    await EventManagement.waitForDeployment();
-  
-    const address = await EventManagement.getAddress();
-    console.log("EventManagement deployed to:", address);
-  }
-  
-  main()
-    .then(() => process.exit(0))
-    .catch((error) => {
-      console.error(error);
-      process.exit(1);
-    });
-  
+  const address = await eventManagement.getAddress();
+  console.log("EventManagement deployed to:", address);
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });

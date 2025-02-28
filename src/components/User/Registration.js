@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { toggleTheme } from '../utils/themeToggle';
+
 
 function Registration({ contract }) {
   const [isRegistered, setIsRegistered] = useState(false);

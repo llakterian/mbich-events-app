@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
+import { toggleTheme } from '../utils/themeToggle';
+
 
 function TicketDisplay({ contract, userAddress }) {
   const [registeredEvents, setRegisteredEvents] = useState([]);

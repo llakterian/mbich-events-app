@@ -1,0 +1,26 @@
+:root {
+    /* Neon Color Palette */
+    --neon-primary: #00ffd5;
+    --neon-secondary: #ff00ff;
+    --neon-accent: #7700ff;
+    --dark-base: #0a0b0f;
+    
+    /* Animation Properties */
+    --liquid-transition: cubic-bezier(0.65, 0, 0.35, 1);
+    --geometric-pattern: repeating-linear-gradient(
+      45deg,
+      var(--neon-primary),
+      var(--neon-secondary)
+    );
+  }
+  
+  .glass-effect {
+    background: rgba(10, 11, 15, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .liquid-animation {
+    animation: flowingBackground 8s var(--liquid-transition) infinite;
+  }
+  

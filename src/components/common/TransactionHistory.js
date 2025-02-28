@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { formatEther } from 'ethers';
+import { toggleTheme } from '../utils/themeToggle';
+
 
 function TransactionHistory({ contract, account }) {
   const [transactions, setTransactions] = useState([]);

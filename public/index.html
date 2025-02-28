@@ -1,43 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <title>MBich Events | Decentralized Event Platform</title>
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="description" content="Decentralized event management platform powered by blockchain technology" />
+    
+    <!-- SEO & Social Tags -->
+    <meta property="og:title" content="MBich Events | Decentralized Event Platform" />
+    <meta property="og:description" content="Decentralized event management platform powered by blockchain technology" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mbich-events.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://mbich-events.com" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <!-- Optimized Font Loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Trebuchet+MS:wght@400;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Trebuchet+MS:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <style>
+        /* Core Styles */
+        :root {
+            --primary-color: #3B82F6;
+            --secondary-color: #6366F1;
+            --accent-color: #10B981;
+            --text-color: #1F2937;
+        }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            font-family: 'Trebuchet MS', Verdana, Arial, sans-serif;
+            color: var(--text-color);
+        }
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Previous CSS remains unchanged */
+        .site-navigation { /* Add styles here */ }
+        .nav-links { /* Add styles here */ }
+        .nav-links a { /* Add styles here */ }
+        .nav-links a::after { /* Add styles here */ }
+        .nav-links a:hover::after { /* Add styles here */ }
+        .event-grid { /* Add styles here */ }
+        .event-card { /* Add styles here */ }
+        .event-card:hover { /* Add styles here */ }
+        .wallet-button { /* Add styles here */ }
+        .wallet-button:hover { /* Add styles here */ }
+        .purchase-button { /* Add styles here */ }
+        .purchase-button:hover:not(:disabled) { /* Add styles here */ }
+        .purchase-button:disabled { /* Add styles here */ }
+        .purchase-success { /* Add styles here */ }
+        .purchase-success.visible { /* Add styles here */ }
+        @keyframes slideIn { /* Add keyframes here */ }
+        @media (max-width: 768px) { /* Add media query styles here */ }
+    </style>
+</head>
+</head>
+</head>
+<body>
+    <noscript>
+        <div style="padding: 20px; text-align: center; background: #FEF2F2; color: #DC2626;">
+            JavaScript is required to interact with the blockchain.
+        </div>
+    </noscript>
+
+    <div id="root">
+        <nav class="site-navigation" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <h1 class="site-title">MBich Events</h1>
+                <div class="nav-links">
+                    <a href="#events" aria-label="Discover Events">Discover Events</a>
+                    <a href="#create" aria-label="Create Event">Create Event</a>
+                    <a href="#tickets" aria-label="My Tickets">My Tickets</a>
+                    <button class="wallet-button" id="walletConnect" aria-label="Connect Wallet">Connect Wallet</button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="page-content" role="main">
+            <div class="event-grid" id="eventContainer" aria-label="Event listings">
+                <!-- Dynamic event content will be inserted here -->
+            </div>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="footer-container">
+                <p>&copy; 2024 MBich Events - Powered by Blockchain Technology</p>
+                <small>Secure • Transparent • Decentralized</small>
+            </div>
+        </footer>
+    </div>
+
+    <script defer src="/static/js/bundle.js"></script>
+</body>
 </html>
